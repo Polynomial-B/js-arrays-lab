@@ -344,9 +344,23 @@ Hint: Be sure to declare and initialize the total variable before the iterations
 Complete Exercise 15 in the space below:
 */
 
-// let total = 0;
-// for()
+let total = 0;
+for(let i = 0; i < numArrays.length; i++) {
+    for(let n = 0; n < numArrays[i].length; n++) {
+        total += numArrays[i][n]
+    
+    }
+}
 
 
-//console.log('Exercise 15 result:\n', total);
 
+
+console.log('Exercise 15 result:\n', total);
+
+
+// const numArrays = [
+// 	[100, 5, 23],
+// 	[15, 21, 72, 9],
+// 	[45, 66],
+// 	[7, 81, 90]
+// ];
