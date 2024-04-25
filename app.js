@@ -257,8 +257,8 @@ for (const letsGetFizzical of nums)
     //divisible by 3 and 5
     if(letsGetFizzical % 3 === 0 && letsGetFizzical % 5 === 0) {
         fizzbuzz.push(letsGetFizzical);
-        fizz.push(letsGetFizzical);
-        buzz.push(letsGetFizzical);
+      //   fizz.push(letsGetFizzical);
+      //   buzz.push(letsGetFizzical);
     //divisible only by 3
     } else if(letsGetFizzical % 3 === 0) {
         fizz.push(letsGetFizzical);
@@ -273,6 +273,25 @@ for (const letsGetFizzical of nums)
 // console.log('  fizz:', fizz);
 // console.log('  buzz:', buzz);
 // console.log('  fizzbuzz:', fizzbuzz);
+
+
+// * JOE'S ALTERNATIVE ANSWER -- forEACH
+
+
+// ! NOTE THAT IN THIS CASE WE HAVE 3 SEPARATE 'IF' LOOPS, SO EACH NUMBER WILL RUN THROUGH EACH STATEMENT WITHOUT RETURNING ONCE BECOMING TRUE AFTER REACHING ONE ARGUMENT:
+
+
+// nums.forEach(num => {
+//    if (num % 3 === 0 && num % 5 === 0) {
+//       fizzbuzz.push(num)
+//    }
+//    if (num % 3 === 0) {
+//       fizz.push(num)
+//    }
+//    if (num % 5 === 0) {
+//       buzz.push(num)
+//    }
+// })
 
 
 
@@ -355,12 +374,32 @@ for(let i = 0; i < numArrays.length; i++) {
 
 
 
-console.log('Exercise 15 result:\n', total);
+//console.log('Exercise 15 result:\n', total);
 
 
-// const numArrays = [
-// 	[100, 5, 23],
-// 	[15, 21, 72, 9],
-// 	[45, 66],
-// 	[7, 81, 90]
-// ];
+// * NICK's EXPLANATION
+
+
+// let outTotal = 0
+// numArrays.forEach((withinArray) => {
+//    //console.log("Each time we loop ", withinArray)
+//    withinArray.forEach((withinNestedArrays) => {
+//       //console.log("Each individual number ", withinNestedArray)
+//       outTotal = outTotal + withinNestedArrays
+//    })
+// })
+
+// console.log(`Test 1: ${outTotal}`)
+
+
+// // * FOR OF
+
+// let thisTotal = 0
+// for (const nums of numArrays) {
+//    //console.log(nums)
+//    for (const num of nums) {
+//       thisTotal += num
+//    }
+// }
+// console.log(`Test 2: ${thisTotal}`)
+
